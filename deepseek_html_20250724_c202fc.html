@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .binarium-corner-btn {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: 120px;
+      height: auto;
+      z-index: 1000;
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <!-- Ваш скриншот как кнопка -->
+  <img src="image.png" class="binarium-corner-btn" alt="EUR/JPY 1-5 мин" title="EUR/JPY">
+  
+  <script>
+    // Обработка клика (при необходимости)
+    document.querySelector('.binarium-corner-btn').addEventListener('click', function() {
+      console.log('Кнопка Binarium активирована');
+      // Ваш код обработки
+    });
+  </script>
+</body>
+</html>
