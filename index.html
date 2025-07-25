@@ -17,20 +17,24 @@
             font-family: 'Segoe UI', Arial, sans-serif;
         }
 
-        /* Логотип с эффектом свечения */
+        /* Квадратная иконка с увеличенным размером */
         .custom-logo {
-            height: 28px;
-            width: auto;
+            width: 40px;  /* Новый размер */
+            height: 40px; /* Делаем квадратной */
+            object-fit: contain; /* Чтобы изображение не искажалось */
             user-select: none;
             transition: all 0.3s ease;
             filter: drop-shadow(0 0 0 rgba(0, 162, 255, 0));
-            border-radius: 50%; /* Для плавного свечения */
-            padding: 3px; /* Чтобы свечение не обрезалось */
+            background: rgba(0, 162, 255, 0.1); /* Фоновый оттенок */
+            border-radius: 4px; /* Легкое скругление углов */
+            padding: 5px; /* Отступ внутри квадрата */
+            box-sizing: border-box;
         }
 
         .custom-logo:hover {
-            filter: drop-shadow(0 0 8px rgba(0, 162, 255, 0.7));
+            filter: drop-shadow(0 0 12px rgba(0, 162, 255, 0.8));
             transform: scale(1.05);
+            background: rgba(0, 162, 255, 0.2); /* Усиленный фон при наведении */
         }
 
         /* Кнопка выбора актива */
@@ -72,7 +76,8 @@
                 gap: 10px;
             }
             .custom-logo {
-                height: 24px;
+                width: 36px;
+                height: 36px;
             }
             .custom-asset-btn {
                 padding: 6px 10px;
@@ -84,7 +89,7 @@
 <body>
     <!-- Кастомный header -->
     <div class="binarium-custom-header">
-        <!-- Логотип с эффектом hover -->
+        <!-- Квадратная иконка с эффектом -->
         <img src="bin-icon.png" class="custom-logo" alt="Binarium">
 
         <!-- Кнопка актива -->
