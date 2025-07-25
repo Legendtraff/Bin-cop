@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Binarium Header</title>
+    <style>
+        /* Основные стили */
+        .binarium-custom-header {
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 1000;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        /* Логотип с эффектом свечения */
+        .custom-logo {
+            height: 28px;
+            width: auto;
+            user-select: none;
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 0 0 rgba(0, 162, 255, 0));
+            border-radius: 50%; /* Для плавного свечения */
+            padding: 3px; /* Чтобы свечение не обрезалось */
+        }
+
+        .custom-logo:hover {
+            filter: drop-shadow(0 0 8px rgba(0, 162, 255, 0.7));
+            transform: scale(1.05);
+        }
+
+        /* Кнопка выбора актива */
+        .custom-asset-btn {
+            background: #1A233B;
+            border-left: 3px solid #00A2FF;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            min-width: 120px;
+            transition: all 0.3s ease;
+        }
+
+        .custom-asset-btn:hover {
+            background: #252f4a;
+        }
+
+        /* Текст в кнопке */
+        .asset-pair {
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            display: block;
+            line-height: 1.2;
+        }
+
+        .asset-time {
+            color: #8A94B0;
+            font-size: 12px;
+            display: block;
+            line-height: 1.2;
+        }
+
+        /* Адаптация под мобильные */
+        @media (max-width: 768px) {
+            .binarium-custom-header {
+                top: 8px;
+                left: 8px;
+                gap: 10px;
+            }
+            .custom-logo {
+                height: 24px;
+            }
+            .custom-asset-btn {
+                padding: 6px 10px;
+                min-width: 110px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Кастомный header -->
+    <div class="binarium-custom-header">
+        <!-- Логотип с эффектом hover -->
+        <img src="bin-icon.png" class="custom-logo" alt="Binarium">
+
+        <!-- Кнопка актива -->
+        <div class="custom-asset-btn" onclick="alert('Функция выбора актива')">
+            <span class="asset-pair">GBP/USD</span>
+            <span class="asset-time">1–5 мин. 90%</span>
+        </div>
+    </div>
+</body>
+</html>
